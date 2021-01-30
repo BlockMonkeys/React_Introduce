@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
 const ProgressBar = (props) => {
     var percent = props.progress;
@@ -11,6 +11,21 @@ const ProgressBar = (props) => {
         </div>
     )
 };
+
+const progressEffect = keyframes`
+    0%{
+        width: 0px;
+        background-color: green;
+    }
+    50%{
+        width: ${(props)=> props.percent/2};
+        background-color: blue;
+    }
+    100%{
+        width: ${(props)=> props.percent};
+        background-color: red;
+    }
+`;
 
 const Outer = styled.div`
     border: none;
@@ -26,6 +41,8 @@ const Inner = styled.div`
     background-color: red;
     width: ${(props)=> props.percent};
     height: 10px;
+    animation: ${progressEffect} 1s linear;
 `;
+
 
 export default ProgressBar;
