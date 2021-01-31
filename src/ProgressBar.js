@@ -6,7 +6,9 @@ const ProgressBar = (props) => {
     return(
         <div className="ProgressBar">
             <Outer>
-                <Inner percent={percent}></Inner>
+                <Inner percent={percent}>
+                    <PercentText>{percent}</PercentText> 
+                </Inner>
             </Outer>
         </div>
     )
@@ -32,7 +34,7 @@ const Outer = styled.div`
     border-radius: 25px;
     background-color: gray;
     width: 100%;
-    height: 10px;
+    height: 12px;
 `;
 
 const Inner = styled.div`
@@ -40,8 +42,16 @@ const Inner = styled.div`
     border-radius: 25px;
     background-color: red;
     width: ${(props)=> props.percent};
-    height: 10px;
+    height: 12px;
     animation: ${progressEffect} 1s linear;
+`;
+
+const PercentText = styled.div`
+    width: 100%;
+    text-align: center;
+    font-size: 6px;
+    color: white;
+    font-style: italic;
 `;
 
 
