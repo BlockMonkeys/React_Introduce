@@ -9,11 +9,11 @@ const MenuBar = (props) => {
     const goIntro = () => {
         props.props.history.push('/intro');
     }
+    const goExperience = () => {
+        props.props.history.push('/experience');
+    }
     const goProject = () => {
         props.props.history.push('/project');
-    }
-    const goBlog = () => {
-        props.props.history.push('/blog');
     }
     const goContact = () => {
         props.props.history.push('/contact');
@@ -26,6 +26,7 @@ const MenuBar = (props) => {
             <AvatarImg src={img} />
             <Name onClick={goHome}>BlockMonkey</Name>
             <Button onClick={goIntro}>Introduce</Button>
+            <Button onClick={goExperience}>Experience</Button>
             <Button onClick={goProject}>Project</Button>
             <Button onClick={()=>{
                 window.open("https://blockmonkeys.tistory.com/", '_blank');
@@ -39,11 +40,12 @@ const MenuBar = (props) => {
 const Menubar = styled.div`
     position: fixed;
     left: 0;
-    top: 0;
-    width: 33%;
+    top: 20%;
+    bottom: 20%;
+    width: 25%;
     height: 100vh;
     display:flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-direction: column;
     text-align: center;
 `;

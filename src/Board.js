@@ -3,8 +3,8 @@ import styled from "styled-components";
 import ComponentTitle from "./ComponentTitle";
 
 const Board = (props) => {
-    const [MainTitle, setMainTitle] = React.useState("Board");
-    const [SubTitle, setSubTitle] = React.useState("게시판");
+    const [MainTitle] = React.useState("Board 💬");
+    const [SubTitle] = React.useState("게시판");
     return(
         <BoardComponent>
             <ComponentTitle mainTitle={MainTitle} subTitle={SubTitle}/>
@@ -24,7 +24,7 @@ const Board = (props) => {
 }
 
 const BoardComponent = styled.div`
-    margin-left: 33%;
+    margin-left: 25%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -54,6 +54,7 @@ const SubmitBtn = styled.button`
     border: none;
     background-color: gray;
     color: white;
+    margin-left: 5px;
     &:hover{
         cursor: pointer;
         font-weight: 600;

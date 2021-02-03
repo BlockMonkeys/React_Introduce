@@ -13,12 +13,12 @@ const ComponentTitle = (props) => {
 }
 
 const TitleComponent = styled.div`
-    margin: 10px;
+    margin : 35px 0;
 `;
 
 const MainTitleContent = styled.div`
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 35px;
+    font-weight: 700;
 `;
 
 const SubTitleContent = styled.div`

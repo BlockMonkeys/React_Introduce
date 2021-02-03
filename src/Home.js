@@ -5,7 +5,7 @@ import HomeSkill from "./HomeSkill";
 import backImg from "./img/back.jpg";
 
 const Home = (props) => {
-    const [MainTitle, setMainTitle] = React.useState("Home");
+    const [MainTitle, setMainTitle] = React.useState("Home 🧑🏻‍💻");
     const [SubTitle, setSubTitle] = React.useState("홈");
     return(
         <HomeComponent>
@@ -16,12 +16,17 @@ const Home = (props) => {
                 <SubText>Back-end Software Engineer</SubText>
             </MainContentsBox>
             <HomeSkill />
+            <Controller>
+                <UpBtn onClick={()=>{
+                    window.scrollTo({top: 0, behavior: "smooth"});
+                }}>⬆️</UpBtn>
+            </Controller>
         </HomeComponent>
     )
 }
 
 const MainContentsBox = styled.div`
-    height : 90vh;
+    height : 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,9 +46,29 @@ const SubText = styled.div`
 `;
 
 const HomeComponent = styled.div`
-    margin-left: 33%;
+    margin-left: 25%;
     display: flex;
     flex-direction: column;
+`;
+
+const Controller = styled.div`
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+`;
+
+const UpBtn = styled.button`
+    border: none;
+    opacity: 0.3;
+    width: 30px;
+    height: 30px;
+    &:hover{
+        cursor: pointer;
+        opacity: 1;
+    }
+    &:focus{
+        outline: none;
+    }
 `;
 
 

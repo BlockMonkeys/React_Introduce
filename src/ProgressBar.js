@@ -32,7 +32,7 @@ const progressEffect = keyframes`
 const Outer = styled.div`
     border: none;
     border-radius: 25px;
-    background-color: gray;
+    background-color: rgba(0, 0, 0, 0.25);
     width: 100%;
     height: 12px;
 `;
@@ -43,7 +43,7 @@ const Inner = styled.div`
     background-color: red;
     width: ${(props)=> props.percent};
     height: 12px;
-    animation: ${progressEffect} 1s linear;
+    animation: ${progressEffect} 1s 1s linear;
 `;
 
 const PercentText = styled.div`
