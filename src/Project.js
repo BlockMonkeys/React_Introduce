@@ -10,6 +10,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import coinToMeImg from "./img/project/cointome.png";
+import friendshipImg from "./img/project/friendship.png";
+import introImg from "./img/project/intro.png";
 
 
 
@@ -25,33 +27,96 @@ const Project = (props) => {
     return(
         <ProjectComponent>
             <ComponentTitle mainTitle={MainTitle} subTitle={SubTitle}/>
+            <CategoryTitle> Node.js | Express 🤝</CategoryTitle>
+            <CardComponent className="Text">
             <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            CoinToMe Project
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            [팀프로젝트] 코인커뮤니티 사이트를 만들어보고자 2021년 2월부터 진행하는 프로젝트입니다.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    </Card>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="Contemplative Reptile"
+                  height="140"
+                  image={coinToMeImg}
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    CoinToMe Project
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    [팀프로젝트] Node | Express | MongoDB | Pug 를 활용해 제작한 코인 커뮤니티 사이트입니다. (2021-01 ~ ing...)
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary" onClick={()=>{
+                  window.alert("준비중입니다.😖")
+                }}>
+                  View Source Code
+                </Button>
+            </CardActions>
+          </Card>
+          </CardComponent>
+
+
+          <CategoryTitle>React 👊🏼</CategoryTitle>
+            <CardComponent className="Text">
+            <Card className={classes.root}>
+              <CardActionArea onClick={()=>{
+                window.alert("현재 보고계신 페이지입니다 !😅");
+              }}>
+                <CardMedia
+                  component="img"
+                  alt="Contemplative Reptile"
+                  height="140"
+                  image={introImg}
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    자기소개페이지
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    [개인프로젝트] React 를 활용해 만든 자기소개 페이지입니다. (2021-01 ~ 2021-02)
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary" onClick={()=>{
+                  window.alert("준비중입니다.😖")
+                }}>
+                  View Source Code
+                </Button>
+            </CardActions>
+          </Card>
+            <Card className={classes.root}>
+              <CardActionArea onClick={()=>{
+                window.open("https://react-friendshiptest.firebaseapp.com/");
+              }}>
+                <CardMedia
+                  component="img"
+                  alt="Contemplative Reptile"
+                  height="140"
+                  image={friendshipImg}
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    우정테스트
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    [개인프로젝트] React | Redux | Hooks | Firebase를 통해 만든 펭귄 우정테스트 앱입니다. (2021-01 ~ 2021-02)
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary" onClick={()=>{
+                  window.open("https://github.com/BlockMonkeys/React_FriendshipTest");
+                }}>
+                  View Source Code
+                </Button>
+            </CardActions>
+          </Card>
+          </CardComponent>
         </ProjectComponent>
     )
 }
@@ -60,6 +125,21 @@ const ProjectComponent = styled.div`
     margin-left: 25%;
     display: flex;
     flex-direction: column;
+`;
+
+const CardComponent = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+`;
+
+const CategoryTitle = styled.div`
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 40px 0px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid gray;
 `;
 
 export default Project;

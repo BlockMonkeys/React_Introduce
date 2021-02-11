@@ -62,7 +62,7 @@ const Name = styled.button`
     border: none;
     background-color: white;
     font-weight: 800;
-    font-size: 25px;
+    font-size: 40px;
     font-style: italic;
     margin-top: 28px;
     margin-bottom: 80px;
@@ -79,6 +79,7 @@ const Button = styled.button`
     border: none;
     background-color: white;
     padding: 20px 0px;
+    font-size: 18px;
     &:hover{
         cursor: pointer;
         background-color: rgba(0,0,0,0.1);

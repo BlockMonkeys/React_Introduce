@@ -13,6 +13,7 @@ import gitImg from "./img/stack/git.png";
 import githubImg from "./img/stack/github.png";
 import expressImg from "./img/stack/express.png";
 import sassImg from "./img/stack/sassscss.png";
+import firebaseImg from "./img/stack/firebase.png";
 
 const HomeSkill = (props) => {
     return(
@@ -63,13 +64,17 @@ const HomeSkill = (props) => {
                 </div>
                 <div>
                     <ImgBox src={reactImg} />
-                    <ProgressBar progress="70%"/>
+                    <ProgressBar progress="90%"/>
                 </div>
             </ImgContentRow>
             <ImgContentRow>
                 <div>
                     <ImgBox src={pugImg} />
                     <ProgressBar progress="90%"/>
+                </div>
+                <div>
+                    <ImgBox src={firebaseImg} />
+                    <ProgressBar progress="70%"/>
                 </div>
                 <div>
                     <ImgBox src={sassImg} />
@@ -80,10 +85,10 @@ const HomeSkill = (props) => {
         <Footer>
             <FooterTitle>단계별 설명</FooterTitle>
             <FooterTextBox>
-                <FooterText><PercentText>100%</PercentText> 대형 프로젝트 진행경험 😎 </FooterText>
-                <FooterText><PercentText>90%</PercentText> 주요 기능은 암기한 수준 😊 </FooterText>
-                <FooterText><PercentText>70%</PercentText> 토이 프로젝트 적용경험 🧐 </FooterText>
-                <FooterText><PercentText>50%</PercentText> 관련 강의 수료 👊🏼 </FooterText>
+                <FooterText><PercentText>100%</PercentText> Expert 😎 </FooterText>
+                <FooterText><PercentText>90%</PercentText> Fluent about it 😊 </FooterText>
+                <FooterText><PercentText>70%</PercentText> I used it sometimes.. 🧐 </FooterText>
+                <FooterText><PercentText>50%</PercentText> I know what it is ! 👊🏼 </FooterText>
             </FooterTextBox>
         </Footer>
         </SkillsComponent>

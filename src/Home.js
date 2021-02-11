@@ -26,7 +26,7 @@ const Home = (props) => {
 }
 
 const MainContentsBox = styled.div`
-    height : 75vh;
+    height : 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
