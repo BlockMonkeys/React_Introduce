@@ -9,30 +9,22 @@ const MenuBar = (props) => {
     const goIntro = () => {
         props.props.history.push('/intro');
     }
-    const goExperience = () => {
-        props.props.history.push('/experience');
-    }
     const goProject = () => {
         props.props.history.push('/project');
     }
     const goContact = () => {
         props.props.history.push('/contact');
     }
-    const goBoard = () => {
-        props.props.history.push('/board');
-    }
     return(
         <Menubar>
             <AvatarImg src={img} />
             <Name onClick={goHome}>BlockMonkey</Name>
             <Button onClick={goIntro}>Introduce</Button>
-            <Button onClick={goExperience}>Experience</Button>
             <Button onClick={goProject}>Project</Button>
             <Button onClick={()=>{
                 window.open("https://blockmonkeys.tistory.com/", '_blank');
             }}>Blog</Button>
             <Button onClick={goContact}>Contact</Button>
-            <Button onClick={goBoard}>Board</Button>
         </Menubar>
     )
 }

@@ -82,7 +82,7 @@ const Project = (props) => {
               </CardActionArea>
               <CardActions>
                 <Button size="small" color="primary" onClick={()=>{
-                  window.alert("준비중입니다.😖")
+                  window.open("https://github.com/BlockMonkeys/React_Introduce");
                 }}>
                   View Source Code
                 </Button>
