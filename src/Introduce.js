@@ -6,7 +6,6 @@ import kookminImg from "./img/academy/kookmin.png";
 import opentutorialsImg from "./img/academy/opentutorials.png";
 import nomadImg from "./img/academy/nomad.png";
 import zeroImg from "./img/academy/zero.png";
-import spartaImg from "./img/academy/sparta.png";
 import blockChainImg from "./img/academy/blockchain.png"
 
 const Introduce = (props) => {
