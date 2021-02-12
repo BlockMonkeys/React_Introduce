@@ -1,21 +1,35 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import ComponentTitle from "./ComponentTitle";
+import emailjs from 'emailjs-com';
+
 
 const Contact = (props) => {
     const [MainTitle, setMainTitle] = React.useState("Contact 📞");
     const [SubTitle, setSubTitle] = React.useState("연락처");
+
+    function sendEmail(e) {
+        e.preventDefault();
+        emailjs.sendForm('blockmonkey_intro', 'template_yso0hkq', e.target, 'user_svLZKWQ4EiAjYRCFIrAr0')
+          .then((result) => {
+              window.alert("✅ 감사합니다 성공적으로 전송되었습니다. 빠른시일 내에 답변드리겠습니다 ✅");
+          }, (error) => {
+              window.alert("❌ 전송에 실패했습니다, 새로고침 한 뒤, 다시 시도해주세요 ❌");
+          });
+      }
+
+
     useEffect(()=>{
-        window.alert("아직 준비중이에요 😭");
-    },[])
+
+    },[]);
+
     return(
         <ContactComponent>
             <ComponentTitle mainTitle={MainTitle} subTitle={SubTitle}/>
             <EmailComponent>
-                <EmailForm>
-                    <Name_Email_Input type="text" placeholder="성함을 입력해주세요 🐶" name="email_name" />
-                    <Name_Email_Input type="email" placeholder="회신받을 이메일을 입력해주세요 🦜" name="email_email" />
-                    <Text_Input cols="60" rows="10" placeholder="내용을 입력해주세요" name="email_text" />
+                <EmailForm onSubmit={sendEmail}>
+                    <Name_Email_Input type="text" placeholder="회신받을 이메일을 입력해주세요" name="from_name" />
+                    <Text_Input cols="60" rows="20" placeholder="내용을 입력해주세요" name="message" />
                     <SubmitBtn type="submit" />
                 </EmailForm>
             </EmailComponent>
