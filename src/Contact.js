@@ -63,6 +63,7 @@ const ContactComponent = styled.div`
     height: 100vh;
     @media (max-width: 1119px){
         margin-left: 0;
+        height: 80%;
     }
 `;
 
@@ -91,6 +92,11 @@ const Name_Email_Input = styled.input`
         outline: none;
         border-bottom: 2px solid gray;
     }
+    @media (max-width: 1119px){
+        font-size: 12px;
+        text-align: center;
+        width: 100%;
+    }
 `;
 
 const Text_Input = styled.textarea`
@@ -100,6 +106,11 @@ const Text_Input = styled.textarea`
     &:focus{
         outline: none;
         background-color: rgba(255, 250, 240, 0.8);
+    }
+    @media (max-width: 1119px){
+        font-size: 12px;
+        text-align: center;
+        width: 100%;
     }
 `;
 
@@ -113,6 +124,13 @@ const SubmitBtn = styled.input`
     padding: 5px;
     &:hover{
         cursor: pointer;
+    }
+    @media (max-width: 1119px){
+        width: 60%;
+        &:hover{
+            cursor: pointer;
+            color: red;
+        }
     }
 `;
 

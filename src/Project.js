@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import coinToMeImg from "./img/project/cointome.png";
 import friendshipImg from "./img/project/friendship.png";
 import introImg from "./img/project/intro.png";
+import chatImg from "./img/project/chat.png";
 
 
 
@@ -22,6 +23,12 @@ const Project = (props) => {
         root: {
           maxWidth: 345,
           margin: "25px 0",
+          ['@media (max-width: 1119px)']: { // eslint-disable-line no-useless-computed-key
+            maxWidth: 300,
+          },
+          ['@media (max-width: 635px)']: { // eslint-disable-line no-useless-computed-key
+            maxWidth: 200,
+          }
         },
       });
     const classes = useStyles();
@@ -64,7 +71,7 @@ const Project = (props) => {
                   component="img"
                   alt="Contemplative Reptile"
                   height="140"
-                  image={coinToMeImg}
+                  image={chatImg}
                   title="Contemplative Reptile"
                 />
                 <CardContent>

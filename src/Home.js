@@ -32,12 +32,19 @@ const MainContentsBox = styled.div`
     align-items: center;
     flex-direction: column;
     background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 0, 0, 0.3)), url(${backImg});
+    @media (max-width: 1119px){
+        width: 100%;
+        height: 85vh;
+    }
 `;
 
 const MainText = styled.div`
     color: white;
     font-weight: 800;
     font-size: 40px;
+    @media (max-width: 1119px){
+        text-align: center;
+    }
 `;
 
 const SubText = styled.div`
@@ -71,6 +78,9 @@ const UpBtn = styled.button`
     }
     &:focus{
         outline: none;
+    }
+    @media (max-width: 1119px){
+        margin-right: 8px;
     }
 `;
 

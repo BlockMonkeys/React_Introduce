@@ -83,7 +83,7 @@ const HomeSkill = (props) => {
             </ImgContentRow>
         </ImageContainer>
         <Footer>
-            <FooterTitle> ⚠️ 주관적인 판단하에 적혀진 퍼센티지 입니다 😅 </FooterTitle>
+            <FooterTitle> ⚠️ 주관적인 판단하에 평가한 퍼센티지 입니다 😅 </FooterTitle>
         </Footer>
         </SkillsComponent>
     )
@@ -94,11 +94,19 @@ const SkillsComponent = styled.div`
     position: relative;
     margin-top: 50px;
     height: 100vh;
+    @media (max-width: 1119px){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 `;
 
 const Header = styled.div`
     margin : 35px 0;
     border: none;
+    @media (max-width: 1119px){
+        margin: 0px 0px;
+    }
 `;
 
 const Title = styled.div`
@@ -118,6 +126,11 @@ const ImageContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 1119px){
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 60px;
+    }
 `;
 
 const ImgContentRow = styled.div`
@@ -130,6 +143,10 @@ const ImgContentRow = styled.div`
 const ImgBox = styled.img`
     width: 50px;
     height: 50px;
+    @media (max-width: 1119px){
+        width: 35px;
+        height: 35px;
+    }
 `;
 
 const Footer = styled.div`
@@ -146,25 +163,10 @@ const Footer = styled.div`
 
 const FooterTitle = styled.div`
     font-weight: 600;
-    font-size: 20px;
+    font-size: 15px;
     font-style: italic;
+    opacity: 0.5;
 `;
 
-const FooterTextBox = styled.div`
-    border: none;
-`;
-
-const FooterText = styled.div`
-    width: 70vh;
-    padding : 5px;
-`;
-
-const PercentText = styled.span`
-    background-color: ghostwhite;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 25px;
-    padding: 3px;
-`;
 
 export default HomeSkill;
