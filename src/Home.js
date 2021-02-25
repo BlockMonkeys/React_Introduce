@@ -49,6 +49,9 @@ const HomeComponent = styled.div`
     margin-left: 25%;
     display: flex;
     flex-direction: column;
+    @media (max-width: 1119px){
+        margin-left: 0;
+    }
 `;
 
 const Controller = styled.div`

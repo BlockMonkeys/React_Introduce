@@ -83,13 +83,7 @@ const HomeSkill = (props) => {
             </ImgContentRow>
         </ImageContainer>
         <Footer>
-            <FooterTitle>단계별 설명</FooterTitle>
-            <FooterTextBox>
-                <FooterText><PercentText>100%</PercentText> Expert 😎 </FooterText>
-                <FooterText><PercentText>90%</PercentText> Fluent about it 😊 </FooterText>
-                <FooterText><PercentText>70%</PercentText> I used it sometimes.. 🧐 </FooterText>
-                <FooterText><PercentText>50%</PercentText> I know what it is ! 👊🏼 </FooterText>
-            </FooterTextBox>
+            <FooterTitle> ⚠️ 주관적인 판단하에 적혀진 퍼센티지 입니다 😅 </FooterTitle>
         </Footer>
         </SkillsComponent>
     )
@@ -157,7 +151,7 @@ const FooterTitle = styled.div`
 `;
 
 const FooterTextBox = styled.div`
-    border: 1px solid gray;
+    border: none;
 `;
 
 const FooterText = styled.div`

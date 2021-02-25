@@ -34,8 +34,8 @@ const Contact = (props) => {
                 </EmailForm>
             </EmailComponent>
             <FooterContent>
-                <div>📨 : blockmonkey@naver.com</div>
-                <div>📞 : 010 - 9042 - 5495</div>
+                <div>Email : blockmonkey@naver.com</div>
+                <div>KakaoTalk : 00009042</div>
             </FooterContent>
         </ContactComponent>
     )
@@ -51,6 +51,9 @@ const FooterContent = styled.div`
     font-style: italic;
     font-size: 13px;
     font-weight: 600;
+    @media (max-width: 1119px){
+        width: 100%;
+    }
 `;
 
 const ContactComponent = styled.div`
@@ -58,6 +61,9 @@ const ContactComponent = styled.div`
     display: flex;
     flex-direction: column;
     height: 100vh;
+    @media (max-width: 1119px){
+        margin-left: 0;
+    }
 `;
 
 const EmailComponent = styled.div`
@@ -107,7 +113,6 @@ const SubmitBtn = styled.input`
     padding: 5px;
     &:hover{
         cursor: pointer;
-
     }
 `;
 

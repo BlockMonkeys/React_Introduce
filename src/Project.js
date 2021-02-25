@@ -21,6 +21,7 @@ const Project = (props) => {
     const useStyles = makeStyles({
         root: {
           maxWidth: 345,
+          margin: "25px 0",
         },
       });
     const classes = useStyles();
@@ -28,6 +29,7 @@ const Project = (props) => {
         <ProjectComponent>
             <ComponentTitle mainTitle={MainTitle} subTitle={SubTitle}/>
             <CategoryTitle> Node.js | Express 🤝</CategoryTitle>
+
             <CardComponent className="Text">
             <Card className={classes.root}>
               <CardActionArea>
@@ -55,7 +57,35 @@ const Project = (props) => {
                 </Button>
             </CardActions>
           </Card>
+
+          <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="Contemplative Reptile"
+                  height="140"
+                  image={coinToMeImg}
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Chatting App
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    [개인프로젝트] Node | Express | SocketIO | Pug 를 활용해 제작한 코인 커뮤니티 사이트입니다. (2021-01 ~ ing...)
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary" onClick={()=>{
+                  window.open("https://github.com/BlockMonkeys/Node_Socket_Chatting")
+                }}>
+                  View Source Code
+                </Button>
+            </CardActions>
+          </Card>
           </CardComponent>
+
 
 
           <CategoryTitle>React 👊🏼</CategoryTitle>
@@ -125,6 +155,9 @@ const ProjectComponent = styled.div`
     margin-left: 25%;
     display: flex;
     flex-direction: column;
+    @media (max-width: 1119px){
+      margin-left: 0;
+    }
 `;
 
 const CardComponent = styled.div`
@@ -137,7 +170,6 @@ const CategoryTitle = styled.div`
   text-align: center;
   font-size: 20px;
   font-weight: 800;
-  margin: 40px 0px;
   padding-bottom: 15px;
   border-bottom: 1px solid gray;
 `;
