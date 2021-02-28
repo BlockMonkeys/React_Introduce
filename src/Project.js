@@ -35,7 +35,7 @@ const Project = (props) => {
     return(
         <ProjectComponent>
             <ComponentTitle mainTitle={MainTitle} subTitle={SubTitle}/>
-            <CategoryTitle> Node.js | Express 🤝</CategoryTitle>
+            <CategoryTitle> Node.js | Express </CategoryTitle>
 
             <CardComponent className="Text">
             <Card className={classes.root}>
@@ -58,7 +58,7 @@ const Project = (props) => {
               </CardActionArea>
               <CardActions>
                 <Button size="small" color="primary" onClick={()=>{
-                  window.alert("준비중입니다.😖")
+                  window.open("https://github.com/BlockMonkeys/Express_Mongo_CoinToMe");
                 }}>
                   View Source Code
                 </Button>
@@ -79,7 +79,7 @@ const Project = (props) => {
                     Chatting App
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    [개인프로젝트] Node | Express | SocketIO | Pug 를 활용해 제작한 코인 커뮤니티 사이트입니다. (2021-01 ~ ing...)
+                    [개인프로젝트] Node | Express | SocketIO | Pug 를 활용해 제작한 코인 커뮤니티 사이트입니다. (2021-02 ~ ing...)
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -95,7 +95,7 @@ const Project = (props) => {
 
 
 
-          <CategoryTitle>React 👊🏼</CategoryTitle>
+          <CategoryTitle>React</CategoryTitle>
             <CardComponent className="Text">
             <Card className={classes.root}>
               <CardActionArea onClick={()=>{

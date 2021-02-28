@@ -14,6 +14,7 @@ const ComponentTitle = (props) => {
 
 const TitleComponent = styled.div`
     margin : 35px 0;
+    user-select: none;
 `;
 
 const MainTitleContent = styled.div`
